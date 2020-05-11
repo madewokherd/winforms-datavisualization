@@ -670,7 +670,7 @@ namespace System.Windows.Forms.Design.DataVisualization.Charting
                     messageBoxOptions = MessageBoxOptions.RightAlign | MessageBoxOptions.RtlReading;
                 }
 
-                MessageBox.Show(this, SR.MessageYValueIndexInvalid(this._maxYValueIndex.ToString(CultureInfo.CurrentCulture)), SR.MessageChartTitle,
+                MessageBox.Show(this, String.Format(SR.MessageYValueIndexInvalid, this._maxYValueIndex.ToString(CultureInfo.CurrentCulture)), SR.MessageChartTitle,
                     MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, messageBoxOptions);
 
 				_numericUpDownYValue.Value = 0;
